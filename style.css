@@ -1,0 +1,420 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+.menu {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  color: black;
+  padding: 24px;
+  font-size: 20px;
+  z-index: 999;
+}
+
+.menu div, a {
+  display: flex;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+}
+
+.menu div:last-of-type {
+  justify-content: flex-end;
+}
+
+.arama {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+  gap: 4px;
+}
+
+.arama input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 1em;
+}
+
+.arama i {
+  font-size: .8em;
+}
+
+.menubutonlar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menubutonlar button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px;
+  outline: 0;
+  display: flex;
+  gap: 6px;
+  background: none;
+  color: white;
+  background-color: #4D008C;
+  font-size: .8em;
+  cursor: pointer;
+}
+
+.menubutonlar button:hover {
+  background: #6d1ab1;
+}
+
+.kategori {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: .8em;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.kategori button {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  outline: 0;
+  display: flex;
+  gap: 6px;
+  background: none;
+  color: black;
+  cursor: pointer;
+}
+
+.kategori button:hover {
+  background: #f0f0f0;
+}
+
+.kitaplar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.kitap {
+  width: 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.3s;
+}
+
+.kitap > a {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.kitap:hover > a {
+  transition: all 0.3s;
+  transform: scale(1.05);
+  background-color: white;
+}
+
+.kitap:hover > .sepetfiyat {
+  display: none;
+}
+
+.kitap:hover > .sepet {
+  display: flex;
+}
+
+.kitap > .sepet {
+  display: none;
+}
+
+.kitapfoto {
+  padding: 4px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.kitapfoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.kitap h2 {
+  margin: 0;
+}
+
+.kitapyazar {
+  font-size: .8em;
+  color: #808080;
+}
+
+.fiyat {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: right;
+}
+
+.sepet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  gap: 6px;
+  border-radius: 8px;
+  background-color: #4D008C;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+}
+
+.sepetfiyat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  gap: 2px;
+  border-radius: 8px;
+  background-color: #4D008C;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.detay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detaycontainer h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.detay img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.detaycontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+.yayin {
+  font-size: 1.2em;
+  color: #808080;
+  margin-top: 8px;
+}
+
+.detaylar {
+  width: 500px;
+}
+
+.fiyatcontainer{
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  padding: 24px;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.fiyatyazi {
+  display: flex;
+  align-items: flex-end;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2ace7b;
+}
+
+.kucuk {
+  font-size: .5em;
+  margin-bottom: 6px;
+}
+
+.sepetekle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 1.1em;
+  gap: 6px;
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f1be32;
+  padding: 10px;
+  font-weight: bold;
+  padding-right: 24px;
+  padding-left: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.liste {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: .6em;
+  color: #4a4a4a;
+}
+
+.liste:hover .listehover-dolu {
+  display: none;
+}
+
+.liste .listehover-bos {
+  display: none;
+}
+
+.liste:hover .listehover-bos {
+  display: block;
+}
+
+.sepetliste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.aciklamacontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.tamaciklama {
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.bilgiler {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.yildizlar {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  font-size: .4em;
+  margin-top: 8px;
+}
+
+.rating {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	color: #ddd;
+  display: flex;
+  justify-content: flex-end;
+  font-size: .5em;
+  margin-top: 6px;
+}
+.rating input {
+	display: none;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked + label,
+.rating input:checked + label ~ label {
+	color: #ffc107;
+}
+
+.logom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.aciklamasi {
+  margin-top: 14px;
+}
+
+.menubtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menubtn:hover .cikanmenu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+  width: 150px;
+  left: 0;
+  gap: 8px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menubtn .cikanmenu {
+  display: none;
+}
+
+.cikanmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cikanmenu li {
+  font-size: 1.3em;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #ffffff;
+}
+
+.cikanmenu li:hover{
+  font-size: 1.3em;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #e0e0e0;
+}
